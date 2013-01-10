@@ -476,6 +476,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="image" destination="HFs-R3-WA0" id="5OF-j6-sZd"/>
+                                    <segue destination="SnA-3W-4ev" kind="push" identifier="showDetail" id="fi6-b6-OSu"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -490,13 +491,45 @@
             </objects>
             <point key="canvasLocation" x="1672" y="-295"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="BXM-eb-eiA">
+            <objects>
+                <viewController id="SnA-3W-4ev" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E3I-tI-qcU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-Lc-xFw"/>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yN4-Lc-xFw" firstAttribute="bottom" secondItem="E3I-tI-qcU" secondAttribute="bottom" type="default" id="4F8-Tr-Vcx"/>
+                            <constraint firstItem="yN4-Lc-xFw" firstAttribute="trailing" secondItem="E3I-tI-qcU" secondAttribute="trailing" type="default" id="FWp-f2-bQ4"/>
+                            <constraint firstItem="yN4-Lc-xFw" firstAttribute="leading" secondItem="E3I-tI-qcU" secondAttribute="leading" type="default" id="cZD-NO-Bkh"/>
+                            <constraint firstItem="yN4-Lc-xFw" firstAttribute="top" secondItem="E3I-tI-qcU" secondAttribute="top" type="default" id="e8q-ca-ZkU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HhP-od-yY0"/>
+                    <connections>
+                        <outlet property="imageView" destination="yN4-Lc-xFw" id="Gj9-rs-gj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYD-8Z-CM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2161" y="-295"/>
+        </scene>
     </scenes>
     <classes>
         <class className="Cell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Cell.h"/>
             <relationships>
                 <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="HNYCDescriptionVC" superclassName="UIViewController">
@@ -510,6 +543,9 @@
         </class>
         <class className="HNYCViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HNYCViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="updateCurrentLocation:"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -525,6 +561,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

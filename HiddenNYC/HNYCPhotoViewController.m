@@ -8,6 +8,7 @@
 
 #import "HNYCPhotoViewController.h"
 #import "Cell.h"
+#import "DetailViewController.h"
 
 
 NSString *kDetailedViewControllerID = @"DetailView";    // view controller storyboard id
@@ -52,6 +53,23 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"])
+    {
+       // NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+        
+        // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
+        //NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];
+        NSString *imageNameToLoad = @"FreedomTunnel1";
+        NSString *pathToImage = [[NSBundle mainBundle] pathForResource:imageNameToLoad ofType:@"jpg"];
+        UIImage *image = [[UIImage alloc] initWithContentsOfFile:pathToImage];
+        
+        DetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.image = image;
+    }
 }
 
 @end
