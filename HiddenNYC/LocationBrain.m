@@ -45,15 +45,15 @@
         self.geocoder = [[CLGeocoder alloc] init];
           NSString *address = weirdAddress;
             [self.geocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
-                NSLog(@"%@",address);
+         //       NSLog(@"%@",address);
 
                 if ([placemarks count] > 0) {
                     CLPlacemark *placemark = [placemarks objectAtIndex:0];
                     CLLocation *loc = placemark.location;
                     CLLocationCoordinate2D coordinate = loc.coordinate;
                     CLLocationDistance  dis = [location distanceFromLocation: loc];
-                    NSLog(@"%f", dis/1609);
-                    NSLog(@"%@",[NSString stringWithFormat:@"%f, %f", coordinate.latitude, coordinate.longitude]);
+           //         NSLog(@"%f", dis/1609);
+          //          NSLog(@"%@",[NSString stringWithFormat:@"%f, %f", coordinate.latitude, coordinate.longitude]);
                     if ([placemark.areasOfInterest count] > 0) {
                         //        self.nameLabel.text = [placemark.areasOfInterest objectAtIndex:0];
                         
@@ -81,7 +81,7 @@
     
     [dict enumerateKeysAndObjectsWithOptions:NSEnumerationConcurrent
 usingBlock:^(id key, id object, BOOL *stop) {
-    NSLog(@"%@",key);
+    //NSLog(@"%@",key);
 //    dispatch_async(getQueue, ^{
         [self forwardGeocode:newLocation:key];
 }];

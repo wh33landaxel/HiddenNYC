@@ -17,6 +17,9 @@
 		A67397C6169BC6F000F6FBAD /* WhisperingGallery2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BF169BC6F000F6FBAD /* WhisperingGallery2.jpg */; };
 		A68A89F816950068007812D0 /* Description.json in Resources */ = {isa = PBXBuildFile; fileRef = A68A89F716950068007812D0 /* Description.json */; };
 		A68A89FA16951CEB007812D0 /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = A68A89F916951CEB007812D0 /* File.txt */; };
+		A6959931169E23AA009DC4B5 /* HNYCPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6959930169E23AA009DC4B5 /* HNYCPhotoViewController.m */; };
+		A6959935169E268E009DC4B5 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6959934169E268E009DC4B5 /* Cell.m */; };
+		A6959938169E2772009DC4B5 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A6959937169E2772009DC4B5 /* CustomCellBackground.m */; };
 		A6E0960D1698C70D00FB8DB8 /* LocationBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E0960C1698C70D00FB8DB8 /* LocationBrain.m */; };
 		A6E096101698EE7E00FB8DB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E0960F1698EE7E00FB8DB8 /* MapKit.framework */; };
 		A6E096161698F21C00FB8DB8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E096151698F21C00FB8DB8 /* CoreLocation.framework */; };
@@ -46,6 +49,12 @@
 		A67397BF169BC6F000F6FBAD /* WhisperingGallery2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WhisperingGallery2.jpg; sourceTree = "<group>"; };
 		A68A89F716950068007812D0 /* Description.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Description.json; sourceTree = "<group>"; };
 		A68A89F916951CEB007812D0 /* File.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
+		A695992F169E23AA009DC4B5 /* HNYCPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNYCPhotoViewController.h; sourceTree = "<group>"; };
+		A6959930169E23AA009DC4B5 /* HNYCPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNYCPhotoViewController.m; sourceTree = "<group>"; };
+		A6959933169E268E009DC4B5 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		A6959934169E268E009DC4B5 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		A6959936169E2772009DC4B5 /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
+		A6959937169E2772009DC4B5 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		A6E0960B1698C70D00FB8DB8 /* LocationBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationBrain.h; sourceTree = "<group>"; };
 		A6E0960C1698C70D00FB8DB8 /* LocationBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationBrain.m; sourceTree = "<group>"; };
 		A6E0960F1698EE7E00FB8DB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +94,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6959939169E32A8009DC4B5 /* UICollectionMethods */ = {
+			isa = PBXGroup;
+			children = (
+				A695992F169E23AA009DC4B5 /* HNYCPhotoViewController.h */,
+				A6959930169E23AA009DC4B5 /* HNYCPhotoViewController.m */,
+				A6959936169E2772009DC4B5 /* CustomCellBackground.h */,
+				A6959937169E2772009DC4B5 /* CustomCellBackground.m */,
+				A6959933169E268E009DC4B5 /* Cell.h */,
+				A6959934169E268E009DC4B5 /* Cell.m */,
+			);
+			name = UICollectionMethods;
+			sourceTree = "<group>";
+		};
 		A6F17AF01690DE05009F597F = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +139,7 @@
 		A6F17B051690DE05009F597F /* HiddenNYC */ = {
 			isa = PBXGroup;
 			children = (
+				A6959939169E32A8009DC4B5 /* UICollectionMethods */,
 				A65B32CE1697A05500B08910 /* HNYCDescriptionVC.h */,
 				A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */,
 				A6F17B0E1690DE05009F597F /* HNYCAppDelegate.h */,
@@ -237,6 +260,9 @@
 				A6F17B1F1690DE06009F597F /* HNYCViewController.m in Sources */,
 				A65B32D01697A05500B08910 /* HNYCDescriptionVC.m in Sources */,
 				A6E0960D1698C70D00FB8DB8 /* LocationBrain.m in Sources */,
+				A6959931169E23AA009DC4B5 /* HNYCPhotoViewController.m in Sources */,
+				A6959935169E268E009DC4B5 /* Cell.m in Sources */,
+				A6959938169E2772009DC4B5 /* CustomCellBackground.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

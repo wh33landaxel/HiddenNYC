@@ -35,7 +35,7 @@
 -(void)setPlaces:(NSDictionary *)dictionary{
     if(!_places){
         _places = [[NSDictionary alloc] initWithDictionary:dictionary];
-        NSLog(@"%@", _places);
+        //NSLog(@"%@", _places);
     }
     else
         return;
