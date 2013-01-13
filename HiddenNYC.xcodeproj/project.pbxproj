@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A60A513F169F70C3008020EA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A513E169F70C3008020EA /* DetailViewController.m */; };
+		A652C4BE16A35299000312FA /* HNYCSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A652C4BD16A35299000312FA /* HNYCSearchVC.m */; };
 		A65B32D01697A05500B08910 /* HNYCDescriptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */; };
 		A67397C0169BC6F000F6FBAD /* Chickalicious.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397B9169BC6F000F6FBAD /* Chickalicious.jpg */; };
 		A67397C1169BC6F000F6FBAD /* Chickalicious2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BA169BC6F000F6FBAD /* Chickalicious2.jpg */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		A60A513D169F70C3008020EA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A60A513E169F70C3008020EA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A652C4BC16A35299000312FA /* HNYCSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNYCSearchVC.h; sourceTree = "<group>"; };
+		A652C4BD16A35299000312FA /* HNYCSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNYCSearchVC.m; sourceTree = "<group>"; };
 		A65B32CE1697A05500B08910 /* HNYCDescriptionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNYCDescriptionVC.h; sourceTree = "<group>"; };
 		A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNYCDescriptionVC.m; sourceTree = "<group>"; };
 		A67397B9169BC6F000F6FBAD /* Chickalicious.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chickalicious.jpg; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				A6959939169E32A8009DC4B5 /* UICollectionMethods */,
+				A652C4BC16A35299000312FA /* HNYCSearchVC.h */,
+				A652C4BD16A35299000312FA /* HNYCSearchVC.m */,
 				A65B32CE1697A05500B08910 /* HNYCDescriptionVC.h */,
 				A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */,
 				A6F17B0E1690DE05009F597F /* HNYCAppDelegate.h */,
@@ -269,6 +274,7 @@
 				A6959935169E268E009DC4B5 /* Cell.m in Sources */,
 				A6959938169E2772009DC4B5 /* CustomCellBackground.m in Sources */,
 				A60A513F169F70C3008020EA /* DetailViewController.m in Sources */,
+				A652C4BE16A35299000312FA /* HNYCSearchVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

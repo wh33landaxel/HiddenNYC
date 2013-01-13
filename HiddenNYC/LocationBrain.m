@@ -50,8 +50,8 @@
                 if ([placemarks count] > 0) {
                     CLPlacemark *placemark = [placemarks objectAtIndex:0];
                     CLLocation *loc = placemark.location;
-                    CLLocationCoordinate2D coordinate = loc.coordinate;
-                    CLLocationDistance  dis = [location distanceFromLocation: loc];
+           //         CLLocationCoordinate2D coordinate = loc.coordinate;
+           //         CLLocationDistance  dis = [location distanceFromLocation: loc];
            //         NSLog(@"%f", dis/1609);
           //          NSLog(@"%@",[NSString stringWithFormat:@"%f, %f", coordinate.latitude, coordinate.longitude]);
                     if ([placemark.areasOfInterest count] > 0) {

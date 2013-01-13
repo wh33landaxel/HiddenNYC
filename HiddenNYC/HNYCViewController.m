@@ -9,6 +9,9 @@
 #import "HNYCViewController.h"
 #import "HNYCDescriptionVC.h"
 #import "LocationBrain.h"
+#import "HNYCSearchVC.h"
+
+
 @interface HNYCViewController ()
 @property (strong, nonatomic) NSDictionary *dictionary;
 @property (strong,nonatomic) LocationBrain *LB;
@@ -25,7 +28,7 @@
 
 - (IBAction)updateCurrentLocation:(id)sender {
     if(!_LB){
-    _LB = [[LocationBrain alloc] init];
+        _LB = [[LocationBrain alloc] init];
     }
     
     [_LB takeCurrentLocation];
@@ -35,12 +38,12 @@
 
 - (void)viewDidLoad
 {
-
+    
     [super viewDidLoad];
     [self setDictionary:[self loadJSONData]];
-
+    
     _LB = [[LocationBrain alloc] init];
-
+    
     [_LB takeCurrentLocation];
     
     // Here it would find the address closest
@@ -87,6 +90,10 @@
         [segue.destinationViewController setTitle: placeName];
         [segue.destinationViewController setDescription:placeDescription];
         [segue.destinationViewController setPlaces : _dictionary];
+        
+    }
+    else if([segue.identifier isEqualToString:@"beginSearch"]){
+        [segue.destinationViewController setPlaceDict:_dictionary];
         
     }
 }
