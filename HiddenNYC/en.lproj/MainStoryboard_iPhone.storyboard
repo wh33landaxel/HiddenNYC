@@ -169,17 +169,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="3g1-I5-gEX">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="ZjN-1h-VF9" id="fR1-4L-E1O"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Search Cell" textLabel="Rrd-A9-jHo" detailTextLabel="H2Z-Sz-Njk" style="IBUITableViewCellStyleSubtitle" id="9r4-zt-Opr">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -223,7 +215,6 @@
                 <searchDisplayController id="cS7-sT-tOH">
                     <connections>
                         <outlet property="delegate" destination="ZjN-1h-VF9" id="Wdc-ec-0lj"/>
-                        <outlet property="searchBar" destination="3g1-I5-gEX" id="Xgs-9e-ZI6"/>
                         <outlet property="searchContentsController" destination="ZjN-1h-VF9" id="4vj-4C-CEp"/>
                         <outlet property="searchResultsDataSource" destination="ZjN-1h-VF9" id="AYX-4M-c1m"/>
                         <outlet property="searchResultsDelegate" destination="ZjN-1h-VF9" id="zaf-me-O2K"/>
@@ -612,9 +603,6 @@
         </class>
         <class className="HNYCViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HNYCViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="updateCurrentLocation:"/>
-            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

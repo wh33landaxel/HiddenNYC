@@ -62,7 +62,7 @@
 #pragma mark - Table view data source
 
 
-/*
+/* ---TO BE IMPLEMENTED LATER BY FILTER---
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
@@ -70,6 +70,7 @@
     return 0;
 }
 */
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -81,84 +82,24 @@
     static NSString *CellIdentifier = @"Search Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Values in array of places, woe_name is the city, _content is province and country
+    // Values in array of places, name is the place name
     NSDictionary *dict;
     
-    // Full Location is the city, province, and country.
-    // Subtitle is just province, and country.
-    NSString *fullLocation, *subtitle;
-    
-    // Splits Full location by commas to obtain the subtitle
+    // Places the dictionary into a Array for easier implementation
     NSArray *placeDetail = [[NSArray alloc] initWithArray:[_placeDict allValues]];
-    
-    // Retrieves the top places from flickr
-    // [self setTheTopPlaces:[FlickrFetcher topPlaces]];
 
-    // Alphabetizes the array by city name
+    // Alphabetizes the array by place name
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     placeDetail = [placeDetail sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor, nil]];
     [self setPlaceArray:placeDetail];
-  //  NSLog(@"%@",placeDetail);
-    //Prints the title and subtitle of corresponding table row
+    //Prints the title table row
     dict = [placeDetail objectAtIndex:indexPath.row];
-    NSDictionary * dictCopy = [dict mutableCopy];
     cell.textLabel.text = [dict objectForKey:@"name"];
-    fullLocation = [dict objectForKey:@"_content"];
-    placeDetail = [fullLocation componentsSeparatedByString:@","];
-    
-    // Checks whether subtitle has province
-    subtitle = [placeDetail objectAtIndex:1];
-    if(placeDetail.count == 3){
-        subtitle =   [subtitle stringByAppendingString:@","];
-        subtitle =   [subtitle stringByAppendingString:[placeDetail objectAtIndex:2]];
-    }
-    cell.detailTextLabel.text = subtitle;
-    
-    
-  //  [self setLocation:dictCopy];
-    
+    cell.detailTextLabel.text = @"";
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -180,13 +121,14 @@
             cell = sender;
         }
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        NSArray * locationArray = [_placeArray objectAtIndex:indexPath.row];
+        
+        //Create a dictionary for the specified location from the placeArray
         NSDictionary * dict;
         dict = [[NSDictionary alloc] initWithDictionary: [_placeArray objectAtIndex:indexPath.row]];
+        
+        //Pick the values for the name and description out of the dictionary
         NSString * name = [dict objectForKey:@"name"];
-        NSLog(@"%@",name);
         NSString * description = [dict objectForKey: @"description"];
-        NSLog(@"%@",description);
        [segue.destinationViewController setTitle:name];
         [segue.destinationViewController setDescription:description];
         
