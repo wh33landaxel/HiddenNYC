@@ -33,6 +33,8 @@
     
 }
 
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -92,6 +94,7 @@
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     placeDetail = [placeDetail sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor, nil]];
     [self setPlaceArray:placeDetail];
+    
     //Prints the title table row
     dict = [placeDetail objectAtIndex:indexPath.row];
     cell.textLabel.text = [dict objectForKey:@"name"];
@@ -129,9 +132,11 @@
         //Pick the values for the name and description out of the dictionary
         NSString * name = [dict objectForKey:@"name"];
         NSString * description = [dict objectForKey: @"description"];
+        NSString *address = [dict objectForKey:@"address"];
        [segue.destinationViewController setTitle:name];
         [segue.destinationViewController setDescription:description];
-        
+        [segue.destinationViewController setAddress :address];
+        [segue.destinationViewController setPlaces:_placeDict];
 
         
     }

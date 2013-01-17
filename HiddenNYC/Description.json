@@ -4,20 +4,27 @@
             "filterLocation": "Uptown",
             "phoneNum": "No landline to this tunnel",
             "description" : " Brave urban explorers likely band together before venturing to this (literally) underground (and probably illegal) venue.  Between the 70s and 90s, many homeless people seeking to escape the sweltering heat, bitter cold and thieves/junkies of the city shelters headed underground to the unused subway tunnels.  Most of these shantytowns were driven out during Mayor Giuliani’s term.  In the 2000 award-winning documentary “Dark Days”, journalist Mark Singer lived among his subjects for months in a shantytown called the Freedom Tunnel, which runs adjacent to Riverside Park from 125th Street to Penn Station.  The shantytown has since been demolished, but the tunnel remains. If you dare, beware of discarded needles, Amtrak trains that hurtle by and rough characters.  You’ll see archaeological remnants from the old shantytowns and some of the best graffiti in the city, including that of Chris “Freedom” Pape for whom the tunnel is named." ,
-            "address": "125th St and Riverside Park, Manhattan, NY"
+            "address": "125th St and Riverside Park, Manhattan, NY" ,
+            "imageTag" : "_FT" ,
+            "numImages" : 3
         } ,
         "Grand Central Station, Manhattan, NY" : {
             "name" : "Whispering Gallery",
             "filterLocation": "Midtown",
             "phoneNum" : "None",
             "description" : "Just outside the Oyster Bar restaurant, three corridors merge under a tiled archway. If two people stand facing the pillars that are diagonally across from each other, even the softest whisper can be heard at the receiving end, 40 feet away, in this bustling station.  It is believed that this architectural oddity must have been intentional, but the mystery of why still remains." ,
-            "address": "125th St and Riverside Park, Manhattan, NY"
+            "address": "Grand Central Station, Manhattan, NY" ,
+            "imageTag" : "_WG" ,
+            "numImages" : 2
 
         } ,
     "203 East 10th Street,Manhattan, NY" : {
         "name" : "Chickalicious",
         "filterLocation": "Downtown",
         "phoneNum" : "212-995-9511",
-        "description" : "Located in the East Village, this restaurant serves only dessert, in a three-course, $12 prix fixe meal.  It begins with an “amuse bouche” and finishes with petit fours.  For the main course you can choose among the half-dozen gourmet dessert plates, served with side dishes of ice cream and garnishes. Wine or coffee/tea can be added for $7 or $3.50 respectively."        
+        "description" : "Located in the East Village, this restaurant serves only dessert, in a three-course, $12 prix fixe meal.  It begins with an “amuse bouche” and finishes with petit fours.  For the main course you can choose among the half-dozen gourmet dessert plates, served with side dishes of ice cream and garnishes. Wine or coffee/tea can be added for $7 or $3.50 respectively." ,
+        "address" : "203 East 10th Street,Manhattan, NY" ,
+        "imageTag" : "_CKL" ,
+        "numImages" : 2
     }
 }

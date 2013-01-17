@@ -394,7 +394,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HJg-IX-Z71" kind="push" id="JyD-2V-cuG"/>
+                                    <segue destination="Xpc-s8-MRq" kind="push" identifier="Show Photos" id="mrb-bJ-aQr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1q-Ln-9f2">
@@ -462,47 +462,12 @@
             </objects>
             <point key="canvasLocation" x="752" y="41"/>
         </scene>
-        <!--View Controller - My Photos-->
-        <scene sceneID="jTj-5x-xmR">
-            <objects>
-                <viewController id="XpU-8l-uKO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rv6-jc-JVZ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="My Photos" id="0Ak-hT-J6p"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OCO-Bm-hGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1659" y="487"/>
-        </scene>
-        <!--Tab Bar Controller - Photos-->
-        <scene sceneID="Vpw-5D-eiV">
-            <objects>
-                <tabBarController definesPresentationContext="YES" id="HJg-IX-Z71" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Photos" id="pPD-L4-Qqc"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="88H-5H-TSs">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="XpU-8l-uKO" kind="relationship" relationship="viewControllers" id="k83-vI-pKz"/>
-                        <segue destination="Xpc-s8-MRq" kind="relationship" relationship="viewControllers" id="jde-tC-aWa"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fVX-Pd-3kV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1209" y="41"/>
-        </scene>
         <!--Photo View Controller - Default Photos-->
         <scene sceneID="bGP-sA-waX">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Xpc-s8-MRq" customClass="HNYCPhotoViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="iav-9w-eqY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XSL-cJ-qKc">
                             <size key="itemSize" width="148" height="136"/>
@@ -543,17 +508,18 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Default Photos" id="p7X-Eh-DFx"/>
+                    <navigationItem key="navigationItem" id="ndQ-F0-08K"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjr-Ae-etd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="-295"/>
+            <point key="canvasLocation" x="1320" y="236"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="BXM-eb-eiA">
             <objects>
                 <viewController id="SnA-3W-4ev" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3I-tI-qcU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yN4-Lc-xFw"/>
@@ -573,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYD-8Z-CM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2161" y="-295"/>
+            <point key="canvasLocation" x="1737" y="236"/>
         </scene>
     </scenes>
     <classes>
@@ -603,6 +569,9 @@
         </class>
         <class className="HNYCViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HNYCViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="updateCurrentLocation:"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -626,6 +595,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UUs-wA-uoq"/>
+        <segue reference="lCE-WB-A03"/>
     </inferredMetricsTieBreakers>
 </document>

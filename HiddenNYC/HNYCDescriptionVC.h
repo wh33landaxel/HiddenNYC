@@ -12,6 +12,6 @@
 
 -(void)setDescription:(NSString *) description;
 -(void)setPlaces:(NSDictionary *) dictionary;
-
+-(void)setAddress: (NSString *) address;
 
 @end

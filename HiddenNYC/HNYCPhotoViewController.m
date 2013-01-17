@@ -58,27 +58,82 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
 @end
 
 @implementation HNYCPhotoViewController
+@synthesize numPics = _numPics;
+@synthesize photoDict = _photoDict;
+@synthesize placeName = _placeName;
+@synthesize mainDict = _mainDict;
+@synthesize address = _address;
+
+- (void) setNumPics:(NSNumber *)numPics{
+    if(!_numPics){
+        _numPics = [[NSNumber alloc] init];
+        _numPics = numPics;
+    }
+    else
+        _numPics = numPics;
+}
+
+- (void) setPhotoDict:(NSDictionary *)photoDict{
+    if(!_photoDict){
+        _photoDict = [[NSDictionary alloc]initWithDictionary:photoDict];
+    }
+    else
+        _photoDict = photoDict;
+    
+}
+
+- (void) setPlaceName:(NSString *)placeName {
+    if(_placeName){
+        _placeName = [[NSString alloc]initWithString:placeName];
+    }
+    else
+        _placeName = placeName;
+}
+
+-(void) setMainDict:(NSDictionary *)mainDict{
+    if(!_mainDict)
+        _mainDict = [[NSDictionary alloc]initWithDictionary:mainDict];
+    else
+        _mainDict = mainDict;
+    
+}
+
+-(void) setAddress:(NSString *)address{
+    if(!_address)
+        _address = [[NSString alloc] initWithString:address];
+    else
+        _address = address;
+    
+    
+}
+
+
 
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section;
 {
-    return 32;
+   // NSLog(@"%@", _address);
+//    NSLog(@"%@",_placeName);
+    NSLog(@"%@", _mainDict);
+    [self setPhotoDict:[_mainDict objectForKey:_address]];
+  //  NSLog(@"%@", _photoDict);
+    NSInteger numImages = [[_photoDict objectForKey:@"numImages"] integerValue];
+  //  NSLog(@"%i", numImages);
+    return numImages;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    NSLog(@"Hello ImageView");
-    // we're going to use a custom UICollectionViewCell, which will hold an image and its label
-    //
     Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:kCellID forIndexPath:indexPath];
     
     // make the cell's title the actual NSIndexPath value
-  //  cell.label.text = [NSString stringWithFormat:@"{%ld,%ld}", (long)indexPath.row, (long)indexPath.section];
+    //cell.label.text = [NSString stringWithFormat:@"{%ld,%ld}", (long)indexPath.row, (long)indexPath.section];
     
     // load the image for this cell
-    NSString *imageToLoad = @"FreedomTunnel1.jpg";
+    NSString *imageToLoad = [NSString stringWithFormat:@"%d%@.jpg", indexPath.row ,[_photoDict objectForKey:@"imageTag"]];
     cell.image.image = [UIImage imageNamed:imageToLoad];
+    
     
     return cell;
 }
@@ -99,11 +154,11 @@ NSString *kCellID = @"cellID";                          // UICollectionViewCell 
 {
     if ([[segue identifier] isEqualToString:@"showDetail"])
     {
-       // NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+         NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
         
         // load the image, to prevent it from being cached we use 'initWithContentsOfFile'
-        //NSString *imageNameToLoad = [NSString stringWithFormat:@"%d_full", selectedIndexPath.row];
-        NSString *imageNameToLoad = @"FreedomTunnel1";
+        NSString *imageNameToLoad = [NSString stringWithFormat:@"%d%@", selectedIndexPath.row ,[_photoDict objectForKey:@"imageTag"]];
+      //  NSString *imageNameToLoad = @"FreedomTunnel1";
         NSString *pathToImage = [[NSBundle mainBundle] pathForResource:imageNameToLoad ofType:@"jpg"];
         UIImage *image = [[UIImage alloc] initWithContentsOfFile:pathToImage];
         

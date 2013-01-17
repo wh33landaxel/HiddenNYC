@@ -12,9 +12,9 @@
 		A65B32D01697A05500B08910 /* HNYCDescriptionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */; };
 		A67397C0169BC6F000F6FBAD /* 0_CKL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397B9169BC6F000F6FBAD /* 0_CKL.jpg */; };
 		A67397C1169BC6F000F6FBAD /* 1_CKL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BA169BC6F000F6FBAD /* 1_CKL.jpg */; };
-		A67397C2169BC6F000F6FBAD /* FreedomTunnel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BB169BC6F000F6FBAD /* FreedomTunnel1.jpg */; };
-		A67397C3169BC6F000F6FBAD /* FreedomTunnel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BC169BC6F000F6FBAD /* FreedomTunnel2.jpg */; };
-		A67397C4169BC6F000F6FBAD /* FreedomTunnel3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BD169BC6F000F6FBAD /* FreedomTunnel3.jpg */; };
+		A67397C2169BC6F000F6FBAD /* 0_FT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BB169BC6F000F6FBAD /* 0_FT.jpg */; };
+		A67397C3169BC6F000F6FBAD /* 1_FT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BC169BC6F000F6FBAD /* 1_FT.jpg */; };
+		A67397C4169BC6F000F6FBAD /* 2_FT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BD169BC6F000F6FBAD /* 2_FT.jpg */; };
 		A67397C5169BC6F000F6FBAD /* 0_WG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BE169BC6F000F6FBAD /* 0_WG.jpg */; };
 		A67397C6169BC6F000F6FBAD /* 1_WG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A67397BF169BC6F000F6FBAD /* 1_WG.jpg */; };
 		A68A89F816950068007812D0 /* Description.json in Resources */ = {isa = PBXBuildFile; fileRef = A68A89F716950068007812D0 /* Description.json */; };
@@ -48,9 +48,9 @@
 		A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNYCDescriptionVC.m; sourceTree = "<group>"; };
 		A67397B9169BC6F000F6FBAD /* 0_CKL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_CKL.jpg; sourceTree = "<group>"; };
 		A67397BA169BC6F000F6FBAD /* 1_CKL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_CKL.jpg; sourceTree = "<group>"; };
-		A67397BB169BC6F000F6FBAD /* FreedomTunnel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FreedomTunnel1.jpg; sourceTree = "<group>"; };
-		A67397BC169BC6F000F6FBAD /* FreedomTunnel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FreedomTunnel2.jpg; sourceTree = "<group>"; };
-		A67397BD169BC6F000F6FBAD /* FreedomTunnel3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FreedomTunnel3.jpg; sourceTree = "<group>"; };
+		A67397BB169BC6F000F6FBAD /* 0_FT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_FT.jpg; sourceTree = "<group>"; };
+		A67397BC169BC6F000F6FBAD /* 1_FT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_FT.jpg; sourceTree = "<group>"; };
+		A67397BD169BC6F000F6FBAD /* 2_FT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2_FT.jpg; sourceTree = "<group>"; };
 		A67397BE169BC6F000F6FBAD /* 0_WG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0_WG.jpg; sourceTree = "<group>"; };
 		A67397BF169BC6F000F6FBAD /* 1_WG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_WG.jpg; sourceTree = "<group>"; };
 		A68A89F716950068007812D0 /* Description.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Description.json; sourceTree = "<group>"; };
@@ -105,9 +105,9 @@
 			children = (
 				A67397B9169BC6F000F6FBAD /* 0_CKL.jpg */,
 				A67397BA169BC6F000F6FBAD /* 1_CKL.jpg */,
-				A67397BB169BC6F000F6FBAD /* FreedomTunnel1.jpg */,
-				A67397BC169BC6F000F6FBAD /* FreedomTunnel2.jpg */,
-				A67397BD169BC6F000F6FBAD /* FreedomTunnel3.jpg */,
+				A67397BB169BC6F000F6FBAD /* 0_FT.jpg */,
+				A67397BC169BC6F000F6FBAD /* 1_FT.jpg */,
+				A67397BD169BC6F000F6FBAD /* 2_FT.jpg */,
 				A67397BE169BC6F000F6FBAD /* 0_WG.jpg */,
 				A67397BF169BC6F000F6FBAD /* 1_WG.jpg */,
 			);
@@ -258,9 +258,9 @@
 				A68A89FA16951CEB007812D0 /* File.txt in Resources */,
 				A67397C0169BC6F000F6FBAD /* 0_CKL.jpg in Resources */,
 				A67397C1169BC6F000F6FBAD /* 1_CKL.jpg in Resources */,
-				A67397C2169BC6F000F6FBAD /* FreedomTunnel1.jpg in Resources */,
-				A67397C3169BC6F000F6FBAD /* FreedomTunnel2.jpg in Resources */,
-				A67397C4169BC6F000F6FBAD /* FreedomTunnel3.jpg in Resources */,
+				A67397C2169BC6F000F6FBAD /* 0_FT.jpg in Resources */,
+				A67397C3169BC6F000F6FBAD /* 1_FT.jpg in Resources */,
+				A67397C4169BC6F000F6FBAD /* 2_FT.jpg in Resources */,
 				A67397C5169BC6F000F6FBAD /* 0_WG.jpg in Resources */,
 				A67397C6169BC6F000F6FBAD /* 1_WG.jpg in Resources */,
 			);

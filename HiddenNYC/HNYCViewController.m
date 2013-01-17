@@ -64,7 +64,7 @@
         _dictionary = [[NSDictionary alloc] initWithDictionary:dictionary];
     }
     else
-        return;
+        _dictionary = dictionary;
     
 }
 

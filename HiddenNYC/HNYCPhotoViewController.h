@@ -49,5 +49,14 @@
 #import <UIKit/UIKit.h>
 
 @interface HNYCPhotoViewController : UICollectionViewController
+@property (nonatomic,strong) NSNumber * numPics;
+@property (nonatomic, strong) NSDictionary * photoDict;
+@property (nonatomic, strong) NSString * placeName;
+@property (nonatomic,strong) NSString * address;
+@property (nonatomic, strong) NSDictionary *mainDict;
+
+-(void)setPlaceName:(NSString *)placeName;
+-(void)setMainDict:(NSDictionary *)mainDict;
+-(void)setAddress:(NSString *)address;
 
 @end
