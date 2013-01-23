@@ -25,6 +25,7 @@
 		A6E0960D1698C70D00FB8DB8 /* LocationBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E0960C1698C70D00FB8DB8 /* LocationBrain.m */; };
 		A6E096101698EE7E00FB8DB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E0960F1698EE7E00FB8DB8 /* MapKit.framework */; };
 		A6E096161698F21C00FB8DB8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E096151698F21C00FB8DB8 /* CoreLocation.framework */; };
+		A6EDC67316AA2D5800F12CA6 /* HNYCFavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EDC67216AA2D5800F12CA6 /* HNYCFavoritesVC.m */; };
 		A6F17B001690DE05009F597F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F17AFF1690DE05009F597F /* UIKit.framework */; };
 		A6F17B021690DE05009F597F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F17B011690DE05009F597F /* Foundation.framework */; };
 		A6F17B041690DE05009F597F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F17B031690DE05009F597F /* CoreGraphics.framework */; };
@@ -65,6 +66,8 @@
 		A6E0960C1698C70D00FB8DB8 /* LocationBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationBrain.m; sourceTree = "<group>"; };
 		A6E0960F1698EE7E00FB8DB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A6E096151698F21C00FB8DB8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A6EDC67116AA2D5800F12CA6 /* HNYCFavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNYCFavoritesVC.h; sourceTree = "<group>"; };
+		A6EDC67216AA2D5800F12CA6 /* HNYCFavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNYCFavoritesVC.m; sourceTree = "<group>"; };
 		A6F17AFB1690DE05009F597F /* HiddenNYC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiddenNYC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F17AFF1690DE05009F597F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A6F17B011690DE05009F597F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +167,8 @@
 				A6959939169E32A8009DC4B5 /* UICollectionMethods */,
 				A652C4BC16A35299000312FA /* HNYCSearchVC.h */,
 				A652C4BD16A35299000312FA /* HNYCSearchVC.m */,
+				A6EDC67116AA2D5800F12CA6 /* HNYCFavoritesVC.h */,
+				A6EDC67216AA2D5800F12CA6 /* HNYCFavoritesVC.m */,
 				A65B32CE1697A05500B08910 /* HNYCDescriptionVC.h */,
 				A65B32CF1697A05500B08910 /* HNYCDescriptionVC.m */,
 				A6F17B0E1690DE05009F597F /* HNYCAppDelegate.h */,
@@ -283,6 +288,7 @@
 				A6959938169E2772009DC4B5 /* CustomCellBackground.m in Sources */,
 				A60A513F169F70C3008020EA /* DetailViewController.m in Sources */,
 				A652C4BE16A35299000312FA /* HNYCSearchVC.m in Sources */,
+				A6EDC67316AA2D5800F12CA6 /* HNYCFavoritesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

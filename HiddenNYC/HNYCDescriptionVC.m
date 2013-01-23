@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *descriptionText;
 @property(strong,nonatomic) NSDictionary * places;
 @property (strong, nonatomic) NSString *address;
+@property (strong, nonatomic) NSArray *favoritesArray;
 
 @end
 
@@ -24,6 +25,7 @@
 @synthesize places = _places;
 @synthesize description = _description;
 @synthesize address = _address;
+@synthesize favoritesArray = _favoritesArray;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,6 +53,13 @@
         _address = address;
 }
 
+-(void)setFavoritesArray:(NSArray *)favoritesArray{
+    if(!_favoritesArray)
+        _favoritesArray = [[NSArray alloc]initWithArray:favoritesArray];
+    else
+        _favoritesArray = favoritesArray;
+}
+
 
 -(void)setDescription:(NSString *)description{
     _description = description;
@@ -61,7 +70,10 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    NSArray *temp = [[NSArray alloc]init];
+    [self setFavoritesArray:temp];
     _descriptionText.text = _description;
 	// Do any additional setup after loading the view.
 }
@@ -72,6 +84,26 @@
     // Dispose of any resources that can be recreated.
     
 }
+
+- (IBAction)favoritePressed:(id)sender {
+   // [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"favoritesArray"];
+  //  NSUserDefaults *pref =[[NSUserDefaults alloc]init];
+    if(![[NSUserDefaults standardUserDefaults]objectForKey:@"favoritesArray"]){
+        [[NSUserDefaults standardUserDefaults]setObject:nil forKey:@"favoritesArray"];
+        NSMutableArray *favArray = [[NSMutableArray alloc]initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"favoritesArray"]];
+       // NSMutableDictionary *mutDict = [[NSMutableDictionary alloc]initWithDictionary:
+        [favArray addObject:[_places objectForKey:_address]];
+        [[NSUserDefaults standardUserDefaults] setObject:favArray forKey:@"favoritesArray"];
+    }
+    else{
+        NSMutableArray *favArray = [[NSMutableArray alloc]initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"favoritesArray"]];
+        [favArray addObject:[_places objectForKey:_address]];
+        [[NSUserDefaults standardUserDefaults] setObject:favArray forKey:@"favoritesArray"];
+    }
+     
+}
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"Show Photos"]){

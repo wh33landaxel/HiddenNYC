@@ -10,6 +10,7 @@
 #import "HNYCDescriptionVC.h"
 #import "LocationBrain.h"
 #import "HNYCSearchVC.h"
+#import "HNYCFavoritesVC.h"
 
 
 @interface HNYCViewController ()
@@ -94,6 +95,11 @@
     }
     else if([segue.identifier isEqualToString:@"beginSearch"]){
         [segue.destinationViewController setPlaceDict:_dictionary];
+        
+    }
+    else if([segue.identifier isEqualToString:@"favorites"]){
+        NSLog(@"%@",_dictionary);
+        [segue.destinationViewController setDefaultDict:_dictionary];
         
     }
 }

@@ -1,37 +1,21 @@
 //
-//  HNYCSearchVC.m
+//  HNYCFavoritesVC.m
 //  HiddenNYC
 //
-//  Created by Axel Nunez on 1/13/13.
+//  Created by Axel Nunez on 1/18/13.
 //  Copyright (c) 2013 CISDD.axel. All rights reserved.
 //
 
-#import "HNYCSearchVC.h"
+#import "HNYCFavoritesVC.h"
 #import "HNYCDescriptionVC.h"
 
-@interface HNYCSearchVC ()
+@interface HNYCFavoritesVC ()
 
 @end
 
-@implementation HNYCSearchVC
-@synthesize placeDict = _placeDict;
-@synthesize placeArray = _placeArray;
-
-
--(void)setPlaceDict:(NSDictionary *)placeDict{
-    if(!_placeDict){
-        _placeDict = [[NSDictionary alloc] initWithDictionary:placeDict];
-    } else
-        _placeDict = placeDict;
-}
-
--(void)setPlaceArray:(NSArray *)placeArray{
-    if(!_placeArray)
-        _placeArray = [[NSArray  alloc]initWithArray:placeArray];
-    else
-        _placeArray = placeArray;
-    
-}
+@implementation HNYCFavoritesVC
+@synthesize defaultDict = _defaultDict;
+@synthesize favDict = _favDict;
 
 
 
@@ -44,13 +28,20 @@
     return self;
 }
 
+-(void)setDefaultDict:(NSDictionary *)defaultDict{
+    if(!_defaultDict)
+        _defaultDict = [[NSDictionary alloc]initWithDictionary:defaultDict];
+    else
+        _defaultDict = defaultDict;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+ 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -64,45 +55,67 @@
 #pragma mark - Table view data source
 
 
-/* ---TO BE IMPLEMENTED LATER BY FILTER---
- - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
- {
- #warning Potentially incomplete method implementation.
- // Return the number of sections.
- return 0;
- }
- */
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+   NSUserDefaults * prefs = [[NSUserDefaults alloc]init];
+   NSMutableArray * favs =  [prefs objectForKey:@"favoritesArray"];    
+    
     // Return the number of rows in the section.
-    return self.placeDict.count;
+    return favs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Search Cell";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Values in array of places, name is the place name
-    NSDictionary *dict;
-    
-    // Places the dictionary into a Array for easier implementation
-    NSArray *placeDetail = [[NSArray alloc] initWithArray:[_placeDict allValues]];
-    
-    // Alphabetizes the array by place name
-    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    placeDetail = [placeDetail sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor, nil]];
-    [self setPlaceArray:placeDetail];
-    
-    //Prints the title table row
-    dict = [placeDetail objectAtIndex:indexPath.row];
-    cell.textLabel.text = [dict objectForKey:@"name"];
+    NSUserDefaults *prefs = [[NSUserDefaults alloc]init];
+    NSMutableArray *favArray = [prefs objectForKey:@"favoritesArray"];
+    cell.textLabel.text = [[favArray objectAtIndex:indexPath.row] objectForKey:@"name"];
     cell.detailTextLabel.text = @"";
+    
+    // Configure the cell...
     
     return cell;
 }
 
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
 
 #pragma mark - Table view delegate
 
@@ -117,8 +130,9 @@
      */
 }
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"Search Description"]){
+    if([segue.identifier isEqualToString:@"Favorite Description"]){
         UITableViewCell * cell;
         if ([sender isKindOfClass:[UITableViewCell class]]){
             cell = sender;
@@ -127,8 +141,10 @@
         
         //Create a dictionary for the specified location from the placeArray
         NSDictionary * dict;
-        dict = [[NSDictionary alloc] initWithDictionary: [_placeArray objectAtIndex:indexPath.row]];
-        
+        NSUserDefaults *prefs = [[NSUserDefaults alloc]init];
+        NSMutableArray *favArray = [prefs objectForKey:@"favoritesArray"];
+        dict = [[NSDictionary alloc] initWithDictionary: [favArray objectAtIndex:indexPath.row]];
+ 
         //Pick the values for the name and description out of the dictionary
         NSString * name = [dict objectForKey:@"name"];
         NSString * description = [dict objectForKey: @"description"];
@@ -136,7 +152,8 @@
         [segue.destinationViewController setTitle:name];
         [segue.destinationViewController setDescription:description];
         [segue.destinationViewController setAddress :address];
-        [segue.destinationViewController setPlaces:_placeDict];
+        NSLog(@"%@%@",self.defaultDict,@"hellodefault");
+        [segue.destinationViewController setPlaces:self.defaultDict];
         
         
     }

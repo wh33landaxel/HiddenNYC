@@ -69,7 +69,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6ZJ-ak-NAG" kind="push" id="A3l-A4-LWF"/>
+                                    <segue destination="6ZJ-ak-NAG" kind="push" identifier="favorites" id="A3l-A4-LWF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-At-ZfN">
@@ -119,20 +119,20 @@
             </objects>
             <point key="canvasLocation" x="138" y="41"/>
         </scene>
-        <!--Table View Controller - Favorites-->
+        <!--FavoritesVC - Favorites-->
         <scene sceneID="tbR-ua-nbj">
             <objects>
-                <tableViewController id="6ZJ-ak-NAG" sceneMemberID="viewController">
+                <tableViewController id="6ZJ-ak-NAG" customClass="HNYCFavoritesVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fPU-GE-R5y">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Z6e-KA-ifn" detailTextLabel="OOC-TQ-SJT" style="IBUITableViewCellStyleSubtitle" id="ulO-fn-Fb3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Z6e-KA-ifn" detailTextLabel="OOC-TQ-SJT" style="IBUITableViewCellStyleSubtitle" id="ulO-fn-Fb3">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6e-KA-ifn">
@@ -148,6 +148,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="41a-mG-bE5" kind="push" identifier="Favorite Description" id="dUU-Uh-iJB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -416,6 +419,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="favoritePressed:" destination="41a-mG-bE5" eventType="touchUpInside" id="2Cg-VS-fT1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfT-V0-bId">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -460,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwC-eV-S6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="41"/>
+            <point key="canvasLocation" x="910" y="41"/>
         </scene>
         <!--Photo View Controller - Default Photos-->
         <scene sceneID="bGP-sA-waX">
@@ -558,8 +564,12 @@
         <class className="HNYCDescriptionVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HNYCDescriptionVC.h"/>
             <relationships>
+                <relationship kind="action" name="favoritePressed:"/>
                 <relationship kind="outlet" name="descriptionText" candidateClass="UITextView"/>
             </relationships>
+        </class>
+        <class className="HNYCFavoritesVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HNYCFavoritesVC.h"/>
         </class>
         <class className="HNYCPhotoViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HNYCPhotoViewController.h"/>
@@ -595,6 +605,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="lCE-WB-A03"/>
+        <segue reference="dUU-Uh-iJB"/>
     </inferredMetricsTieBreakers>
 </document>
