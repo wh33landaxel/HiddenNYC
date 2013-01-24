@@ -132,6 +132,7 @@
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     if([segue.identifier isEqualToString:@"Favorite Description"]){
         UITableViewCell * cell;
         if ([sender isKindOfClass:[UITableViewCell class]]){
@@ -152,7 +153,6 @@
         [segue.destinationViewController setTitle:name];
         [segue.destinationViewController setDescription:description];
         [segue.destinationViewController setAddress :address];
-        NSLog(@"%@%@",self.defaultDict,@"hellodefault");
         [segue.destinationViewController setPlaces:self.defaultDict];
         
         

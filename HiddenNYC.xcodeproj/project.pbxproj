@@ -22,6 +22,7 @@
 		A6959931169E23AA009DC4B5 /* HNYCPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6959930169E23AA009DC4B5 /* HNYCPhotoViewController.m */; };
 		A6959935169E268E009DC4B5 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6959934169E268E009DC4B5 /* Cell.m */; };
 		A6959938169E2772009DC4B5 /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = A6959937169E2772009DC4B5 /* CustomCellBackground.m */; };
+		A6B79B3E16B18E9B00E48081 /* Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = A6B79B3D16B18E9B00E48081 /* Lock.png */; };
 		A6E0960D1698C70D00FB8DB8 /* LocationBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E0960C1698C70D00FB8DB8 /* LocationBrain.m */; };
 		A6E096101698EE7E00FB8DB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E0960F1698EE7E00FB8DB8 /* MapKit.framework */; };
 		A6E096161698F21C00FB8DB8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E096151698F21C00FB8DB8 /* CoreLocation.framework */; };
@@ -62,6 +63,7 @@
 		A6959934169E268E009DC4B5 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		A6959936169E2772009DC4B5 /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
 		A6959937169E2772009DC4B5 /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
+		A6B79B3D16B18E9B00E48081 /* Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lock.png; path = images/Lock.png; sourceTree = "<group>"; };
 		A6E0960B1698C70D00FB8DB8 /* LocationBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationBrain.h; sourceTree = "<group>"; };
 		A6E0960C1698C70D00FB8DB8 /* LocationBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationBrain.m; sourceTree = "<group>"; };
 		A6E0960F1698EE7E00FB8DB8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 		A652C4C316A378DE000312FA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A6B79B3D16B18E9B00E48081 /* Lock.png */,
 				A67397B9169BC6F000F6FBAD /* 0_CKL.jpg */,
 				A67397BA169BC6F000F6FBAD /* 1_CKL.jpg */,
 				A67397BB169BC6F000F6FBAD /* 0_FT.jpg */,
@@ -268,6 +271,7 @@
 				A67397C4169BC6F000F6FBAD /* 2_FT.jpg in Resources */,
 				A67397C5169BC6F000F6FBAD /* 0_WG.jpg in Resources */,
 				A67397C6169BC6F000F6FBAD /* 1_WG.jpg in Resources */,
+				A6B79B3E16B18E9B00E48081 /* Lock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

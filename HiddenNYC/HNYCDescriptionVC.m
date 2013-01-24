@@ -86,21 +86,34 @@
 }
 
 - (IBAction)favoritePressed:(id)sender {
-   // [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"favoritesArray"];
-  //  NSUserDefaults *pref =[[NSUserDefaults alloc]init];
+    //  [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"favoritesArray"];
+    
     if(![[NSUserDefaults standardUserDefaults]objectForKey:@"favoritesArray"]){
         [[NSUserDefaults standardUserDefaults]setObject:nil forKey:@"favoritesArray"];
         NSMutableArray *favArray = [[NSMutableArray alloc]initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"favoritesArray"]];
-       // NSMutableDictionary *mutDict = [[NSMutableDictionary alloc]initWithDictionary:
+        // NSMutableDictionary *mutDict = [[NSMutableDictionary alloc]initWithDictionary:
         [favArray addObject:[_places objectForKey:_address]];
         [[NSUserDefaults standardUserDefaults] setObject:favArray forKey:@"favoritesArray"];
     }
     else{
         NSMutableArray *favArray = [[NSMutableArray alloc]initWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"favoritesArray"]];
-        [favArray addObject:[_places objectForKey:_address]];
-        [[NSUserDefaults standardUserDefaults] setObject:favArray forKey:@"favoritesArray"];
+        NSEnumerator *e = [favArray objectEnumerator];
+        id object;
+        BOOL addressExist = NO;
+        while (object = [e nextObject]) {
+            if([[object objectForKey:@"address"] isEqualToString: _address]){
+                addressExist = YES;
+                break;
+            }
+            
+        }
+        if(!addressExist){
+            [favArray addObject:[_places objectForKey:_address]];
+            [[NSUserDefaults standardUserDefaults] setObject:favArray forKey:@"favoritesArray"];
+        }
     }
-     
+    
+    
 }
 
 

@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-316" y="41"/>
         </scene>
-        <!--View Controller - Hidden NYC-->
+        <!--View Controller - Main Menu-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="HNYCViewController" sceneMemberID="viewController">
@@ -33,11 +33,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-RK-E8a">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-RK-E8a">
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="AEf-LO-g7a"/>
+                                    <constraint firstAttribute="height" constant="44" id="NYL-PU-A75"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                 <state key="normal" title="Somewhere New">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,8 +50,12 @@
                                     <segue destination="41a-mG-bE5" kind="push" identifier="New Description" id="lCE-WB-A03"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDv-Gx-d7N">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDv-Gx-d7N">
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="2JB-cU-ZW6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,10 +67,14 @@
                                     <segue destination="ZjN-1h-VF9" kind="push" identifier="beginSearch" id="G1N-XQ-Es6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-SZ-RiH">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-SZ-RiH">
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Oo1-vG-ofA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                 <state key="normal" title="Favorites">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -73,8 +85,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-At-ZfN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="CCU-MK-QlR"/>
+                                    <constraint firstAttribute="width" constant="56" id="pUd-ln-qRz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Unlockables">
+                                <state key="normal" title="Unlockables" image="Lock.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -85,9 +101,10 @@
                                     <segue destination="TsS-Kf-Q8Z" kind="push" id="tH2-Qn-liV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrN-tE-PZo">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Update Current Location">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrN-tE-PZo">
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
+                                <state key="normal" title="Current Location">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -99,21 +116,25 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="d4n-At-ZfN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7mn-bP-o7R"/>
-                            <constraint firstAttribute="trailing" secondItem="d4n-At-ZfN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8hH-Pz-0eM"/>
-                            <constraint firstItem="fDv-Gx-d7N" firstAttribute="centerX" secondItem="dSl-RK-E8a" secondAttribute="centerX" type="default" id="Jyx-Ne-JSe"/>
-                            <constraint firstItem="TrN-tE-PZo" firstAttribute="centerX" secondItem="a7C-SZ-RiH" secondAttribute="centerX" type="default" id="U0t-Vt-dGw"/>
-                            <constraint firstItem="a7C-SZ-RiH" firstAttribute="top" secondItem="fDv-Gx-d7N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Vwa-FL-vom"/>
-                            <constraint firstItem="TrN-tE-PZo" firstAttribute="top" secondItem="a7C-SZ-RiH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mhg-rn-1G0"/>
-                            <constraint firstItem="dSl-RK-E8a" firstAttribute="top" secondItem="3" secondAttribute="top" constant="152" id="pXE-zt-Ul2"/>
-                            <constraint firstItem="fDv-Gx-d7N" firstAttribute="top" secondItem="dSl-RK-E8a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="rKE-GV-bHk"/>
-                            <constraint firstItem="a7C-SZ-RiH" firstAttribute="centerX" secondItem="fDv-Gx-d7N" secondAttribute="centerX" type="default" id="x2i-AX-Ljj"/>
-                            <constraint firstItem="TrN-tE-PZo" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="xyU-xJ-iCx"/>
+                            <constraint firstItem="fDv-Gx-d7N" firstAttribute="top" secondItem="dSl-RK-E8a" secondAttribute="top" type="default" id="0iB-7i-j9j"/>
+                            <constraint firstItem="TrN-tE-PZo" firstAttribute="trailing" secondItem="fDv-Gx-d7N" secondAttribute="trailing" type="default" id="AnR-kD-idA"/>
+                            <constraint firstItem="a7C-SZ-RiH" firstAttribute="top" secondItem="dSl-RK-E8a" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CzC-Rf-6CK"/>
+                            <constraint firstItem="TrN-tE-PZo" firstAttribute="bottom" secondItem="a7C-SZ-RiH" secondAttribute="bottom" type="default" id="JZw-rD-pHm"/>
+                            <constraint firstAttribute="trailing" secondItem="fDv-Gx-d7N" secondAttribute="trailing" constant="38" id="Jcu-nY-5nf"/>
+                            <constraint firstItem="TrN-tE-PZo" firstAttribute="leading" secondItem="a7C-SZ-RiH" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Lwb-cD-6hJ"/>
+                            <constraint firstItem="fDv-Gx-d7N" firstAttribute="baseline" secondItem="dSl-RK-E8a" secondAttribute="baseline" type="default" id="MSs-fQ-vAA"/>
+                            <constraint firstAttribute="trailing" secondItem="d4n-At-ZfN" secondAttribute="trailing" constant="12" id="SsT-F2-aps"/>
+                            <constraint firstItem="fDv-Gx-d7N" firstAttribute="leading" secondItem="dSl-RK-E8a" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="W6V-VQ-6PT"/>
+                            <constraint firstItem="TrN-tE-PZo" firstAttribute="leading" secondItem="fDv-Gx-d7N" secondAttribute="leading" type="default" id="XJR-fb-AxV"/>
+                            <constraint firstItem="d4n-At-ZfN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="bED-VN-Zd4"/>
+                            <constraint firstItem="a7C-SZ-RiH" firstAttribute="leading" secondItem="dSl-RK-E8a" secondAttribute="leading" type="default" id="fLu-gc-VW5"/>
+                            <constraint firstItem="TrN-tE-PZo" firstAttribute="top" secondItem="fDv-Gx-d7N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kEp-M5-diK"/>
+                            <constraint firstItem="dSl-RK-E8a" firstAttribute="top" secondItem="3" secondAttribute="top" constant="152" id="zF3-rF-AEM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hidden NYC" id="W7O-yR-b9B"/>
+                    <navigationItem key="navigationItem" title="Main Menu" id="W7O-yR-b9B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -548,6 +569,9 @@
             <point key="canvasLocation" x="1737" y="236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Lock.png" width="512" height="512"/>
+    </resources>
     <classes>
         <class className="Cell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/Cell.h"/>
@@ -598,6 +622,9 @@
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -605,6 +632,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dUU-Uh-iJB"/>
+        <segue reference="lCE-WB-A03"/>
     </inferredMetricsTieBreakers>
 </document>
